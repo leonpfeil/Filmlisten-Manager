@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="682.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sep.client.controller.FilterController">
+  <children>
+      <SplitPane prefHeight="682.0" prefWidth="946.0">
+         <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="604.0" prefWidth="413.0">
+               <children>
+                  <TextField fx:id="yearTextfieldFilter" layoutX="132.0" layoutY="185.0" />
+                  <Text layoutX="132.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filmlänge" wrappingWidth="77.13671875">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="132.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regisseur" wrappingWidth="77.13671875">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="132.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erscheinungsjahr" wrappingWidth="121.13671875">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="filmlengthTextfieldFilter" layoutX="132.0" layoutY="129.0" />
+                  <Text layoutX="132.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cast" wrappingWidth="77.13671875">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="27.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtereinstellungen" wrappingWidth="214.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <MenuButton fx:id="genreMenubuttonFilter" layoutX="132.0" layoutY="78.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Genre">
+                    <items>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="adventureCBFilter" text="Adventure" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="actionCBFilter" text="Action" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="animationCBFilter" text="Animation" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="dokuCBFilter" text="Documentary" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="dramaCBFilter" text="Drama" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="eroticCBFilter" text="Erotic" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="familyCBFilter" text="Family" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="fantasyCBFilter" text="Fantasy" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="horrorCBFilter" text="Horror" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="comedyCBFilter" text="Comedy" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="crimeCBFilter" text="Crime" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="loveCBFilter" text="Romance" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="musicCBFilter" text="Music" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="scifiCBFilter" text="Sci-Fi" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="otherCBFilter" text="Other" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="thrillerCBFilter" text="Thriller" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="westernCBFilter" text="Western" />
+                            </content>
+                        </CustomMenuItem>
+                    </items>
+                  </MenuButton>
+                  <Text layoutX="132.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drehbuchautor" wrappingWidth="108.13671875">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="regisseurTextfieldFilter" layoutX="132.0" layoutY="240.0" />
+                  <TextField fx:id="directorTextfieldFilter" layoutX="132.0" layoutY="299.0" />
+                  <TextArea fx:id="castTextareaFilter" layoutX="132.0" layoutY="358.0" prefHeight="103.0" prefWidth="200.0" />
+                  <Button fx:id="doneButtonFilter" layoutX="145.0" layoutY="555.0" mnemonicParsing="false" onAction="#onDoneButtonFilterEvent" prefHeight="25.0" prefWidth="174.0" text="Filter anwenden" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+  </children>
+</VBox>

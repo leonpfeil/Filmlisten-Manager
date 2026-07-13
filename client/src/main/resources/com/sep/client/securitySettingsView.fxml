@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="540.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sep.client.controller.SecuritySettingsController">
+   <children>
+      <Label fx:id="usernameLabel" layoutX="332.0" layoutY="38.0" text="Sicherheitseinstellungen">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="twoFACheckBox" layoutX="45.0" layoutY="399.0" mnemonicParsing="false" text="Zwei-Faktor-Authentifizierung aktiviert" />
+      <Button fx:id="doneButton" layoutX="400.0" layoutY="443.0" mnemonicParsing="false" onAction="#onDoneButtonEvent" text="Bestätigen" />
+      <Label layoutX="404.0" layoutY="86.0" text="Privatsphäre">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="490.0" layoutY="130.0" text="Watchlist wird angezeigt für" />
+      <Label layoutX="274.0" layoutY="130.0" text="Watchedlist wird angezeigt für" />
+      <Label layoutX="30.0" layoutY="130.0" text="Freundesliste wird angezeigt für" />
+      <Label layoutX="682.0" layoutY="130.0" text="Bewertungen werden angezeigt für" />
+      <Label layoutX="45.0" layoutY="361.0" text="Sicherheit">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="backToProfileButton" layoutX="410.0" layoutY="485.0" mnemonicParsing="false" onAction="#onBackToProfileButtonEvent" text="zurück" />
+      <Label fx:id="friendListLabel" layoutX="101.0" layoutY="161.0" text="Label" />
+      <Label fx:id="reviewListLabel" layoutX="761.0" layoutY="163.0" text="Label" />
+      <Label fx:id="watchListLabel" layoutX="551.0" layoutY="163.0" text="Label" />
+      <Label fx:id="watchedListLabel" layoutX="341.0" layoutY="163.0" text="Label" />
+      <Button fx:id="friendListPrivateButton" layoutX="89.0" layoutY="197.0" mnemonicParsing="false" onAction="#onFriendListPrivateButtonEvent" text="Privat" />
+      <Button fx:id="friendListOnlyFansButton" layoutX="82.0" layoutY="241.0" mnemonicParsing="false" onAction="#onFriendListOnlyFansButtonEvent" text="Freunde" />
+      <Button fx:id="friendListPublicButton" layoutX="78.0" layoutY="283.0" mnemonicParsing="false" onAction="#onFriendListPublicButtonEvent" text="Öffentlich" />
+      <Button fx:id="watchedListPrivateButton" layoutX="332.0" layoutY="197.0" mnemonicParsing="false" onAction="#onWatchedListPrivateButtonEvent" text="Privat" />
+      <Button fx:id="watchedListOnlyFansButton" layoutX="325.0" layoutY="241.0" mnemonicParsing="false" onAction="#onWatchedListOnlyFansButtonEvent" text="Freunde" />
+      <Button fx:id="watchedListPublicButton" layoutX="321.0" layoutY="283.0" mnemonicParsing="false" onAction="#onWatchedListPublicButtonEvent" text="Öffentlich" />
+      <Button fx:id="watchListPrivateButton" layoutX="542.0" layoutY="197.0" mnemonicParsing="false" onAction="#onWatchListPrivateButtonEvent" text="Privat" />
+      <Button fx:id="watchListOnlyFansButton" layoutX="535.0" layoutY="241.0" mnemonicParsing="false" onAction="#onWatchListOnlyFansButtonEvent" text="Freunde" />
+      <Button fx:id="watchListPublicButton" layoutX="531.0" layoutY="283.0" mnemonicParsing="false" onAction="#onWatchListPublicButtonEvent" text="Öffentlich" />
+      <Button fx:id="reviewListPrivateButton" layoutX="752.0" layoutY="197.0" mnemonicParsing="false" onAction="#onReviewListPrivateButtonEvent" text="Privat" />
+      <Button fx:id="reviewListOnlyFansButton" layoutX="745.0" layoutY="241.0" mnemonicParsing="false" onAction="#onReviewListOnlyFansButtonEvent" text="Freunde" />
+      <Button fx:id="reviewListPublicButton" layoutX="741.0" layoutY="283.0" mnemonicParsing="false" onAction="#onReviewListPublicButtonEvent" text="Öffentlich" />
+   </children>
+</AnchorPane>

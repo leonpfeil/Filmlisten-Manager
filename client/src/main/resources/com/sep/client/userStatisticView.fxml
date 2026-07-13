@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="663.0" prefWidth="944.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sep.client.controller.UserStatisticController">
+   <children>
+      <DatePicker fx:id="startDatePicker" layoutX="29.0" layoutY="102.0" />
+      <DatePicker fx:id="endDatePicker" layoutX="29.0" layoutY="152.0" />
+      <Label layoutX="57.0" layoutY="53.0" prefHeight="13.0" prefWidth="111.0" text="Zeitraum auswählen" />
+      <Label layoutX="29.0" layoutY="85.0" text="Startdatum" />
+      <Label layoutX="29.0" layoutY="135.0" text="Enddatum" />
+      <BarChart fx:id="barChart" layoutX="238.0" layoutY="40.0" legendSide="LEFT" prefHeight="457.0" prefWidth="671.0" title="Lieblingsschauspieler und Lieblingsgenre">
+        <xAxis>
+          <CategoryAxis animated="false" prefHeight="37.0" prefWidth="593.0" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis animated="false" label="Anzahl" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Label layoutX="58.0" layoutY="266.0" prefHeight="66.0" prefWidth="183.0" text="Gesamtzeit der geschauten Filme in diesem Zeitraum" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="minutenLabel" layoutX="132.0" layoutY="334.0" visible="false" text="Minuten">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="watchedMinutesLabel" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="332.0" visible="false" pickOnBounds="false" prefHeight="31.0" prefWidth="111.0" text="*Zahl*" wrapText="true">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="applyButton" layoutX="76.0" layoutY="195.0" mnemonicParsing="false" onAction="#onApplyButtonEvent" text="Anwenden" />
+      <Label layoutX="107.0" layoutY="418.0" text="Lieblingsfilm">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="filmNameLabel" alignment="CENTER" layoutX="14.0" layoutY="453.0" visible="false" prefHeight="66.0" prefWidth="266.0" text="*Filmname*" wrapText="true">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

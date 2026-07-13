@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sep.client.controller.RegisterController">
+   <children>
+      <Label layoutX="166.0" layoutY="41.0" text="KinoS">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="77.0" text="Erstellen Sie ein neues KinoS-Konto">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstnameTextfield" layoutX="25.0" layoutY="140.0" prefHeight="25.0" prefWidth="150.0" promptText="Vorname" />
+      <TextField fx:id="lastnameTextfield" layoutX="225.0" layoutY="140.0" prefHeight="25.0" prefWidth="150.0" promptText="Nachname" />
+      <TextField fx:id="usernameTextfield" alignment="CENTER" layoutX="25.0" layoutY="200.0" prefHeight="25.0" prefWidth="350.0" promptText="Username" />
+      <TextField fx:id="emailTextfield" alignment="CENTER" layoutX="25.0" layoutY="250.0" prefHeight="25.0" prefWidth="350.0" promptText="Email" />
+      <PasswordField fx:id="setPasswordfield" layoutX="25.0" layoutY="300.0" prefHeight="25.0" prefWidth="150.0" promptText="Passwort" />
+      <TextField fx:id="showPasswordTextfield" layoutX="25.0" layoutY="300.0" prefHeight="25.0" prefWidth="150.0" promptText="Passwort" />
+      <PasswordField fx:id="confirmPasswordfield" layoutX="225.0" layoutY="300.0" prefHeight="25.0" prefWidth="150.0" promptText="Passwort bestätigen" />
+      <TextField fx:id="showConfirmPasswordTextfield" layoutX="225.0" layoutY="300.0" prefHeight="25.0" prefWidth="150.0" promptText="Passwort bestätigen" />
+      <CheckBox fx:id="showPasswordCheckBox" layoutX="25.0" layoutY="325.0" mnemonicParsing="false" onAction="#toggleVisiblePassword" text="Passwort anzeigen" />
+      <Button fx:id="continueButton" layoutX="175.0" layoutY="517.0" mnemonicParsing="false" onAction="#onContinueButtonEvent" text="Weiter" />
+      <Label fx:id="usernameTakenLabel" layoutX="25.0" layoutY="225.0" textFill="RED" />
+      <Label fx:id="nameErrorLabel" layoutX="24.0" layoutY="165.0" textFill="RED" />
+      <Label fx:id="emailTakenError" layoutX="25.0" layoutY="275.0" textFill="RED" />
+      <Label fx:id="passwordErrorLabel" layoutX="233.0" layoutY="325.0" textFill="RED" />
+      <Button fx:id="backToLoginButton" layoutX="175.0" layoutY="644.0" mnemonicParsing="false" onAction="#onBackToLoginButtonEvent" text="Zurück" />
+      <Label layoutX="140.0" layoutY="616.0" text="Schon angemeldet?">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="registerAsAdminCheckbox" layoutX="131.0" layoutY="491.0" mnemonicParsing="false" text="Als Admin registrieren" />
+      <DatePicker fx:id="dateOfBirthDatePicker" editable="false" layoutX="25.0" layoutY="375.0" prefHeight="25.0" prefWidth="150.0" promptText="Geburtsdatum" />
+      <Button fx:id="pfpButton" layoutX="25.0" layoutY="425.0" mnemonicParsing="false" onAction="#onUploadPfpButtonEvent" prefHeight="25.0" prefWidth="150.0" text="Profilbild auswählen" />
+      <ImageView fx:id="profilePictureImageView" fitHeight="100.0" fitWidth="100.0" layoutX="225.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="dateErrorLabel" layoutX="24.0" layoutY="400.0" prefHeight="17.0" prefWidth="150.0" textFill="RED" visible="true" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="428.0" prefWidth="828.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sep.client.controller.OpenMovieInvitationsController">
+   <children>
+      <TableView fx:id="invitationTable" layoutX="5.0" layoutY="65.0" prefHeight="298.0" prefWidth="811.0">
+        <columns>
+          <TableColumn fx:id="usernameCol" prefWidth="163.0" text="username" />
+          <TableColumn fx:id="movieNameCol" prefWidth="166.0" text="movie name" />
+            <TableColumn fx:id="dateCol" prefWidth="109.0" text="date" />
+            <TableColumn fx:id="timeCol" prefWidth="83.0" text="time" />
+            <TableColumn fx:id="messageCol" prefWidth="289.0" text="message" />
+        </columns>
+      </TableView>
+      <Label layoutX="312.0" layoutY="15.0" text="Offene Filmeinladungen">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="declineButton" layoutX="747.0" layoutY="382.0" mnemonicParsing="false" onAction="#onDeclineButtonEvent" text="Ablehnen" />
+      <Button fx:id="acceptButton" layoutX="665.0" layoutY="382.0" mnemonicParsing="false" onAction="#onAcceptButtonAction" text="Annehmen" />
+      <Button fx:id="backButton" layoutX="22.0" layoutY="382.0" mnemonicParsing="false" onAction="#onBackButtonAction" text="Zurück" />
+      <Button fx:id="acceptedInvitationsButton" layoutX="100.0" layoutY="382.0" mnemonicParsing="false" onAction="#onAcceptedInvitationsButtonEvent" text="Angenommene Einladungen" />
+   </children>
+</AnchorPane>

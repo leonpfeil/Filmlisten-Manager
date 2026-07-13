@@ -1,0 +1,108 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+    id 'org.beryx.jlink' version '2.24.1'
+
+}
+
+group 'com.sep'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    junitVersion = '5.8.2'
+}
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+application {
+    mainModule = 'com.sep.client'
+    mainClass = 'com.sep.client.Launcher'
+}
+
+javafx {
+    version = '17.0.1'
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+dependencies {
+    implementation ('mysql:mysql-connector-java:8.0.28')
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.13.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.2.2'
+    implementation ('org.json:json:20210307')
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    //implementation 'org.springframework.boot:spring-boot-starter-web:2.7.0'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.0'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter
+    implementation 'org.springframework.boot:spring-boot-starter:2.7.0'
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    //implementation 'com.google.guava:guava:31.1-jre'
+    // https://mvnrepository.com/artifact/org.springframework/spring-websocket
+    implementation 'org.springframework:spring-websocket:5.3.20'
+    // https://mvnrepository.com/artifact/org.springframework/spring-messaging
+    implementation 'org.springframework:spring-messaging:5.3.20'
+    // https://mvnrepository.com/artifact/org.springframework/spring-web
+    implementation 'org.springframework:spring-web:5.3.21'
+    // https://mvnrepository.com/artifact/org.springframework/spring-core
+    implementation 'org.springframework:spring-core:5.3.21'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    //implementation 'org.springframework.boot:spring-boot-starter-web:2.7.1'
+
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.3'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.13.3'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.13.3'
+
+
+
+
+
+
+
+    runtimeOnly "org.openjfx:javafx-graphics:$javafx.version:win"
+    //runtimeOnly "org.openjfx:javafx-graphics:$javafx.version:linux"
+    //runtimeOnly "org.openjfx:javafx-graphics:$javafx.version:mac"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+mainClassName = 'com.sep.client.Launcher'
+
+jar {
+    manifest {
+        attributes ("Main-Class" : mainClassName)
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+jar { duplicatesStrategy(DuplicatesStrategy.EXCLUDE)}
+
+jlink {
+    imageZip = project.file("${buildDir}/distributions/app-${javafx.platform.classifier}.zip")
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+    launcher {
+        name = 'app'
+    }
+}
+
+jlinkZip {
+    group = 'distribution'
+}

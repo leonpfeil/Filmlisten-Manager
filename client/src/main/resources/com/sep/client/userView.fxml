@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="customSplitPane" prefHeight="855.0" prefWidth="1282.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sep.client.controller.UserController">
+   <children>
+      <Line endX="636.0" endY="716.0" fill="#b52828" layoutX="4.0" layoutY="2.0" startX="636.0" />
+      <ImageView fx:id="usersPFPImageView" fitHeight="50.0" fitWidth="50.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="usernameLabel" alignment="CENTER" layoutX="85.0" layoutY="25.0" prefHeight="20.0" prefWidth="100.0" text="USERNAME">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="profileButton" layoutX="105.0" layoutY="50.0" mnemonicParsing="false" onAction="#onProfileButtonAction" prefHeight="25.0" prefWidth="59.0" text="Profil" />
+      <Button layoutX="25.0" layoutY="110.0" mnemonicParsing="false" onAction="#onWatchlistButtonAction" prefWidth="80.0" text="WatchList" />
+      <Button layoutX="25.0" layoutY="160.0" mnemonicParsing="false" onAction="#onWatchedlistButtonAction" prefHeight="25.0" prefWidth="86.0" text="WatchedList" />
+      <Button fx:id="friendsListButton" layoutX="25.0" layoutY="210.0" mnemonicParsing="false" onAction="#onFriendsButtonAction" prefWidth="80.0" text="FriendsList" />
+      <TextField fx:id="searchBarTextfield" alignment="CENTER" layoutX="196.0" layoutY="38.0" onKeyTyped="#searchForUserAndMovieView" prefWidth="300.0" />
+      <Button fx:id="setFilterButton" layoutX="444.0" layoutY="63.0" mnemonicParsing="false" onAction="#onSetFilterButtonEvent" prefWidth="52.0" text="Filter" />
+      <ListView fx:id="searchListView" layoutX="196.0" layoutY="110.0" prefHeight="619.0" prefWidth="300.0" />
+      <ToggleButton fx:id="movieToggleButton" layoutX="196.0" layoutY="63.0" mnemonicParsing="false" onAction="#onMovieToggleButtonEvent" prefHeight="20.0" prefWidth="75.0" text="Film">
+         <toggleGroup>
+            <ToggleGroup fx:id="searchTypToggleGroup" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="userToggleButton" layoutX="271.0" layoutY="63.0" mnemonicParsing="false" onAction="#onUserToggleButtonEvent" prefWidth="75.0" text="Nutzer" toggleGroup="$searchTypToggleGroup" />
+      <AnchorPane fx:id="userAnchorPane" disable="true" layoutX="636.0" prefHeight="730.0" prefWidth="646.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="582.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <Label alignment="CENTER" layoutX="501.0" layoutY="29.0" prefHeight="20.0" prefWidth="100.0" text="KINOS">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="searchedUsernameLabel" layoutX="121.0" layoutY="51.0" text="USERNAME">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="searchedUserPFPImageView" fitHeight="75.0" fitWidth="75.0" layoutX="40.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="watchedListLabel" layoutX="40.0" layoutY="125.0" text="Gesehene Filme">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="watchListLabel" layoutX="40.0" layoutY="325.0" text="Watchlist">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="friendListLabel" layoutX="40.0" layoutY="525.0" text="Freunde">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ScrollPane fx:id="watchedScroll" fitToHeight="true" layoutX="40.0" layoutY="150.0" prefHeight="175.0" prefWidth="580.0">
+               <content>
+                  <HBox fx:id="watchedlistHBox" alignment="CENTER_LEFT" prefHeight="160.0" prefWidth="580.0" spacing="20.0" />
+               </content>
+            </ScrollPane>
+            <ScrollPane fx:id="watchScroll" fitToHeight="true" layoutX="40.0" layoutY="352.0" prefHeight="175.0" prefWidth="580.0">
+               <content>
+                  <HBox fx:id="watchlistHBox" alignment="CENTER_LEFT" prefHeight="160.0" prefWidth="580.0" spacing="20.0" />
+               </content>
+            </ScrollPane>
+            <ScrollPane fx:id="friendScroll" fitToHeight="true" layoutX="40.0" layoutY="552.0" prefHeight="175.0" prefWidth="580.0">
+               <content>
+                  <HBox fx:id="friendsHBox" alignment="CENTER_LEFT" fillHeight="false" prefHeight="110.0" prefWidth="580.0" spacing="20.0" />
+               </content>
+            </ScrollPane>
+            <Button fx:id="chatButton" layoutX="581.0" layoutY="89.0" mnemonicParsing="false" onAction="#onChatButtonEvent" text="Chat" />
+            <Button fx:id="addFriendButton" layoutX="443.0" layoutY="89.0" mnemonicParsing="false" onAction="#onAddFriendButton" text="Freund hinzufügen" />
+            <Button fx:id="movieInviteButton" layoutX="336.0" layoutY="89.0" mnemonicParsing="false" onAction="#onMovieInviteButtonAction" prefHeight="27.0" prefWidth="86.0" text="Filmeinladung" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="movieAnchorPane" disable="true" layoutX="630.0" prefHeight="855.0" prefWidth="646.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="588.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <Label alignment="CENTER" layoutX="501.0" layoutY="29.0" prefHeight="20.0" prefWidth="100.0" text="KINOS">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="filmNameLabel" alignment="CENTER" layoutX="127.0" layoutY="48.0" prefHeight="32.0" prefWidth="392.0" text="*InsertFilmNameHere*" textAlignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <ImageView fx:id="selectedMovieBanner" fitHeight="214.0" fitWidth="159.0" layoutX="255.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="31.0" layoutY="378.0" prefHeight="27.0" prefWidth="100.0" text="Filmdaten:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="67.0" layoutY="405.0" text="Kategorie:" />
+            <Label layoutX="67.0" layoutY="422.0" text="Filmlänge:" />
+            <Label layoutX="14.0" layoutY="439.0" prefHeight="17.0" prefWidth="107.0" text="Erscheinungsjahr:" />
+            <Label layoutX="68.0" layoutY="457.0" text="Regisseur:" />
+            <Label layoutX="40.0" layoutY="474.0" text="Drehbuchautor:" />
+            <Label layoutX="92.0" layoutY="501.0" text="Cast:" />
+            <Label layoutX="434.0" layoutY="378.0" text="Globale Bewertung:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="438.0" layoutY="461.0" text="Eigene Bewertung:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="filmCategorieLabel" layoutX="123.0" layoutY="405.0" prefHeight="17.0" prefWidth="308.0" text="*InsertCategoriesHere*" />
+            <Label fx:id="filmLengthLabel" layoutX="123.0" layoutY="422.0" prefHeight="17.0" prefWidth="117.0" text="*InsertFilmlängeHere*" />
+            <Label fx:id="filmReleaseYearLabel" layoutX="123.0" layoutY="439.0" text="*InsertReleaseYearHere*" />
+            <Label fx:id="filmRegisseurLabel" layoutX="123.0" layoutY="457.0" text="*InsertRegisseurHere*" />
+            <Label fx:id="filmDirectorLabel" layoutX="123.0" layoutY="474.0" text="*InsertDirectorHere*" />
+            <Label fx:id="numberOfReviewsLabel" layoutX="113.0" layoutY="542.0" prefHeight="17.0" prefWidth="167.0" text="*insertAnzahlAnReviewsHere*" />
+            <Label layoutX="30.0" layoutY="537.0" text="Reviews:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ScrollPane hmax="10.0" layoutX="123.0" layoutY="494.0" prefHeight="32.0" prefWidth="185.0" vbarPolicy="NEVER">
+               <content>
+                  <Label fx:id="filmCastLabel" text="*InsertCastHere*" />
+               </content>
+            </ScrollPane>
+            <Label fx:id="globalratinglablel" layoutX="446.0" layoutY="422.0" />
+            <Button fx:id="previousMovieButton" layoutX="118.0" layoutY="193.0" mnemonicParsing="false" onAction="#onPreviousMovieButtonEvent" prefHeight="25.0" prefWidth="98.0" text="Vorheriger Film" />
+            <Button fx:id="nextMovieButton" layoutX="438.0" layoutY="193.0" mnemonicParsing="false" onAction="#onNextMovieButtonEvent" prefHeight="25.0" prefWidth="98.0" text="Nächster Film" />
+            <Button fx:id="addToWatchlistButton" layoutX="169.0" layoutY="789.0" mnemonicParsing="false" onAction="#onAddToWatchlistButtonEvent" prefHeight="20.0" prefWidth="185.0" text="Zur Watchlist hinzufügen" />
+            <Button fx:id="reportButton" layoutX="385.0" layoutY="789.0" mnemonicParsing="false" onAction="#onReportButtonEvent" text="Fehler melden" />
+            <Button disable="true" layoutX="234.0" layoutY="789.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="185.0" text="Von Watchlist entfernen" visible="false" />
+            <Button fx:id="filmgesehen" layoutX="284.0" layoutY="328.0" mnemonicParsing="false" onAction="#deleteFromWatchlist" text="Film gesehen" />
+            <Button fx:id="removefromwatchedlist" layoutX="261.0" layoutY="366.0" mnemonicParsing="false" onAction="#deleteFromWatchedlist" prefHeight="8.0" prefWidth="133.0" text="Doch nicht gesehen" />
+            <Label fx:id="ratinglabel" layoutX="494.0" layoutY="498.0" prefHeight="41.0" prefWidth="69.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="rateButton" layoutX="46.0" layoutY="789.0" mnemonicParsing="false" onAction="#onRateMovieButtonEvent" prefHeight="25.0" prefWidth="92.0" text="Film bewerten" />
+            <TableView fx:id="reviewtable" layoutX="28.0" layoutY="564.0" prefHeight="207.0" prefWidth="599.0">
+               <columns>
+                  <TableColumn fx:id="usernameCol" prefWidth="109.0" text="Username" />
+                  <TableColumn fx:id="toProfileButtonCol" prefWidth="75.0" text="Profil" />
+                  <TableColumn fx:id="captionCol" prefWidth="113.0" text="Caption" />
+                  <TableColumn fx:id="textCol" prefWidth="376.0" text="Text" />
+               </columns>
+            </TableView>
+            <Label fx:id="globalratingLabel" layoutX="494.0" layoutY="410.0" prefHeight="41.0" prefWidth="69.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="418.0" layoutY="537.0" text="gesehen:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="numberwatchedLabel" layoutX="499.0" layoutY="542.0" prefHeight="17.0" prefWidth="128.0" text="*insertAnzahlGesehen*" />
+            <Button fx:id="statbutton" layoutX="536.0" layoutY="777.0" mnemonicParsing="false" onAction="#downloadStatistic" prefHeight="50.0" prefWidth="92.0" text="Statistik herunterladen" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="favoriteButton" layoutX="451.0" layoutY="288.0" mnemonicParsing="false" onAction="#onFavoriteMovieButtonEvent" text="Favorit" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="scrapeButton" layoutX="22.0" layoutY="447.0" mnemonicParsing="false" onAction="#onScrapeButtonEvent" prefHeight="25.0" prefWidth="92.0" text="Filme scrapen" />
+      <Button fx:id="changeMovieDatabaseButton" layoutX="22.0" layoutY="340.0" mnemonicParsing="false" onAction="#onChangeMovieDatabaseButtonEvent" prefHeight="50.0" prefWidth="129.0" text="Filme hinzufügen und bearbeiten" wrapText="true" />
+      <Button fx:id="showReportsButton" layoutX="21.0" layoutY="407.0" mnemonicParsing="false" onAction="#onShowReportsButtonEvent" text="Meldungen einsehen" />
+      <Label fx:id="filterSelected" layoutX="197.0" layoutY="90.0" text="Filter werden angewendet!" textFill="#fc0101" visible="false" />
+      <Button fx:id="logoutButton" layoutX="30.0" layoutY="799.0" mnemonicParsing="false" onAction="#onLogoutButtonEvent" text="Abmelden" />
+      <Button fx:id="movieInvitationsButton" layoutX="23.0" layoutY="255.0" mnemonicParsing="false" onAction="#onMovieInvitationsButtonEvent" text="Filmeinladungen" />
+      <Button fx:id="GroupButton" layoutX="25.0" layoutY="299.0" mnemonicParsing="false" onAction="#onGroupButtonEvent" prefHeight="25.0" prefWidth="86.0" text="Gruppen" />
+      <Button fx:id="resetbutton" layoutX="22.0" layoutY="492.0" mnemonicParsing="false" onAction="#resetStatistic" prefHeight="50.0" prefWidth="92.0" text="Statistik zurücksetzen" textAlignment="CENTER" wrapText="true" />
+      <AnchorPane fx:id="movieRecAnchorPane" layoutX="637.0" prefHeight="855.0" prefWidth="655.0" style="-fx-background-color: white;">
+         <children>
+            <Label fx:id="recommendationsYouLabel" layoutX="40.0" layoutY="56.0" text="Vorschläge für dich">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="recommendationsFriendLabel" layoutX="38.0" layoutY="292.0" text="Beliebt bei Freunden">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="bestMoviesLabel" layoutX="40.0" layoutY="557.0" text="Von Kritikern gefeiert">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ScrollPane fx:id="watchedScroll1" fitToHeight="true" layoutX="40.0" layoutY="81.0" prefHeight="190.0" prefWidth="580.0">
+               <content>
+                  <HBox fx:id="youRecHBox" alignment="CENTER_LEFT" prefHeight="170.0" prefWidth="580.0" spacing="20.0" />
+               </content>
+            </ScrollPane>
+            <ScrollPane fx:id="watchScroll1" fitToHeight="true" layoutX="38.0" layoutY="319.0" prefHeight="190.0" prefWidth="580.0">
+               <content>
+                  <HBox fx:id="friendsRecHBox" alignment="CENTER_LEFT" prefHeight="160.0" prefWidth="580.0" spacing="20.0" />
+               </content>
+            </ScrollPane>
+            <ScrollPane fx:id="friendScroll1" fitToHeight="true" layoutX="40.0" layoutY="584.0" prefHeight="190.0" prefWidth="580.0">
+               <content>
+                  <HBox fx:id="bestMoviesHBox" alignment="CENTER_LEFT" fillHeight="false" prefHeight="110.0" prefWidth="580.0" spacing="20.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <ToggleButton fx:id="recToggleButton" layoutX="346.0" layoutY="63.0" mnemonicParsing="false" onAction="#onRecToggleButtonEvent" prefWidth="75.0" text="Vorschläge" toggleGroup="$searchTypToggleGroup" />
+   </children>
+</AnchorPane>

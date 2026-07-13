@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="262.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sep.client.controller.ReportController">
+   <children>
+      <TextArea fx:id="reportText" layoutX="40.0" layoutY="84.0" prefHeight="115.0" prefWidth="322.0" wrapText="true" />
+      <Label layoutX="19.0" layoutY="29.0" prefHeight="40.0" prefWidth="95.0" text="Report zu:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="movieLabel" layoutX="114.0" layoutY="34.0" prefHeight="30.0" prefWidth="275.0" text="movie">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="sendReport" onAction="#onSendReportButton" layoutX="40.0" layoutY="216.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Report absenden" />
+      <Button fx:id="cancel" onAction="#onCancelButton" layoutX="233.0" layoutY="216.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Abbrechen" />
+   </children>
+</AnchorPane>

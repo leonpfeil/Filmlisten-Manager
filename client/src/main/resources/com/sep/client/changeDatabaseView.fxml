@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="678.0" prefWidth="946.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sep.client.controller.ChangeDatabaseController">
+  <children>
+      <SplitPane dividerPositions="0.5942796610169492" prefHeight="682.0" prefWidth="946.0">
+         <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="595.0" prefWidth="298.0">
+               <children>
+                  <TextField fx:id="filmnameTextfield" layoutX="65.0" layoutY="104.0" onKeyTyped="#updateVorschlaegeView" />
+                  <TextField fx:id="yearTextfield" layoutX="65.0" layoutY="271.0" />
+                  <Text layoutX="65.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filmname" wrappingWidth="77.13671875">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="65.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filmlänge" wrappingWidth="77.13671875">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="65.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regisseur" wrappingWidth="77.13671875">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="65.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erscheinungsjahr" wrappingWidth="121.13671875">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="filmlengthTextfield" layoutX="65.0" layoutY="210.0" />
+                  <Text layoutX="65.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cast" wrappingWidth="77.13671875">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="uploadBannerButton" layoutX="65.0" layoutY="567.0" mnemonicParsing="false" onAction="#onUploadBannerButtonEvent" prefHeight="25.0" prefWidth="174.0" text="Banner hochladen (optional)" />
+                  <Text layoutX="27.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filme hinzufügen und bearbeiten" wrappingWidth="214.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <MenuButton fx:id="genreMenubutton" layoutX="65.0" layoutY="146.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Genre">
+                    <items>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="adventureCB" text="Adventure" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="actionCB" text="Action" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="animationCB" text="Animation" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="dokuCB" text="Documentary" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="dramaCB" text="Drama" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="eroticCB" text="Erotic" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="familyCB" text="Family" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="fantasyCB" text="Fantasy" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="horrorCB" text="Horror" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="comedyCB" text="Comedy" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="crimeCB" text="Crime" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="loveCB" text="Romance" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="musicCB" text="Music" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="scifiCB" text="Sci-Fi" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="otherCB" text="Other" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="thrillerCB" text="Thriller" />
+                            </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                            <content>
+                                <CheckBox fx:id="westernCB" text="Western" />
+                            </content>
+                        </CustomMenuItem>
+                    </items>
+                  </MenuButton>
+                  <Text layoutX="65.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drehbuchautor" wrappingWidth="108.13671875">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="regisseurTextfield" layoutX="65.0" layoutY="330.0" />
+                  <TextField fx:id="directorTextfield" layoutX="65.0" layoutY="389.0" />
+                  <TextArea fx:id="castTextarea" layoutX="65.0" layoutY="448.0" prefHeight="103.0" prefWidth="200.0" wrapText="true" />
+                  <Button fx:id="doneButton" layoutX="65.0" layoutY="608.0" mnemonicParsing="false" onAction="#onDoneButtonEvent" prefHeight="25.0" prefWidth="174.0" text="Film hinzufügen" />
+                  <Button fx:id="changeDoneButton" disable="true" layoutX="66.0" layoutY="608.0" mnemonicParsing="false" onAction="#onChangeDoneButtonEvent" prefHeight="25.0" prefWidth="174.0" text="Einträge übernehmen" visible="false" />
+                  <Button fx:id="changeBannerButton" disable="true" layoutX="65.0" layoutY="567.0" mnemonicParsing="false" onAction="#onUploadBannerButtonEvent" prefHeight="25.0" prefWidth="174.0" text="Banner ändern (optional)" visible="false" />
+                  <Button fx:id="cancelChangeMovieButton" disable="true" layoutX="318.0" layoutY="567.0" mnemonicParsing="false" onAction="#onCancelChangeMovieButtonEvent" prefHeight="25.0" prefWidth="174.0" text="Filmbearbeitung abbrechen" />
+                  <ImageView fx:id="imageView" fitHeight="254.0" fitWidth="170.0" layoutX="320.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="backToMainPageButton" layoutX="318.0" layoutY="608.0" mnemonicParsing="false" onAction="#onBackToMainPageButtonEvent" prefHeight="25.0" prefWidth="174.0" text="Zurück" />
+                  <Text layoutX="320.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Banner" wrappingWidth="77.13671875">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="676.0" prefWidth="624.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vorschläge" wrappingWidth="129.13671875">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <ListView fx:id="vorschlaegeView" layoutX="14.0" layoutY="46.0" onMouseClicked="#activateChangeButtonEvent" prefHeight="581.0" prefWidth="352.0" />
+                  <Button fx:id="changeMovieButton" disable="true" layoutX="103.0" layoutY="637.0" mnemonicParsing="false" onAction="#onChangeMovieButtonEvent" prefHeight="25.0" prefWidth="174.0" text="Film bearbeiten" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+  </children>
+</VBox>

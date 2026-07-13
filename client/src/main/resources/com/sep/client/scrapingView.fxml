@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sep.client.controller.ScrapingController">
+   <children>
+      <Button fx:id="scrapingbutton" layoutX="460.0" layoutY="188.0" mnemonicParsing="false" onAction="#scrapingFilter" prefHeight="25.0" prefWidth="84.0" text="Download" />
+      <Label layoutX="81.0" layoutY="62.0" text="Erscheinungszeitraum" />
+      <Label layoutX="81.0" layoutY="135.0" text="Genre" />
+      <DatePicker fx:id="startdate" layoutX="250.0" layoutY="58.0" prefHeight="17.0" prefWidth="103.0" promptText="01.01.2021" />
+      <DatePicker fx:id="enddate" layoutX="441.0" layoutY="58.0" prefHeight="17.0" prefWidth="103.0" promptText="31.12.2021" />
+      <Label layoutX="388.0" layoutY="62.0" text="bis" />
+      <Button fx:id="backToMainpageButton" layoutX="460.0" layoutY="328.0" mnemonicParsing="false" onAction="#onBackToMainpageButtonEvent" prefHeight="25.0" prefWidth="84.0" text="Zurück" />
+      <MenuButton fx:id="genreMenubutton" layoutX="396.0" layoutY="131.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Genre">
+         <items>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="actionCB" text="Action" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="adventureCB" text="Adventure" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="animationCB" text="Animation" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="biographyCB" text="Biography" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="comedyCB" text="Comedy" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="crimeCB" text="Crime" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="documentaryCB" text="Documentary" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="dramaCB" text="Drama" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="familyCB" text="Family" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="fantasyCB" text="Fantasy" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="historyCB" text="History" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="horrorCB" text="Horror" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="musicCB" text="Music" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="mysteryCB" text="Mystery" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="romanceCB" text="Romance" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="scifiCB" text="Sci-Fi" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="sportCB" text="Sport" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="thrillerCB" text="Thriller" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="warCB" text="War" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+               <content>
+                  <CheckBox fx:id="westernCB" text="Western" />
+               </content>
+            </CustomMenuItem>
+         </items>
+      </MenuButton>
+      <Label layoutX="81.0" layoutY="192.0" text="Filmanzahl" />
+      <TextField fx:id="filmanzahl" layoutX="253.0" layoutY="188.0" prefHeight="25.0" prefWidth="97.0" promptText="Obergrenze" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox centerShape="false" fillHeight="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="205.0" xmlns="http://javafx.com/javafx/17.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sep.client.controller.ShowHBoxDataController">
+   <children>
+      <ImageView fx:id="imageImageView" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+      <VBox prefHeight="100.0" prefWidth="100.0">
+         <children>
+            <Label fx:id="titleLabel" alignment="CENTER" prefHeight="61.0" prefWidth="100.0" text="Label" wrapText="true" VBox.vgrow="NEVER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="linkButton" mnemonicParsing="false" onAction="#onLinkButtonAction" prefHeight="25.0" prefWidth="100.0" text="Show Friend" />
+         </children>
+      </VBox>
+   </children>
+</HBox>
